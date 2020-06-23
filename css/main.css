@@ -1,31 +1,17 @@
-/* 
-body {
-  color: var(--primary-text-color);
-  background-color: var(--background-color);
-} */
-
-/* колір основного тексту #212121 */
-
-/* колір тексту другорядного #757575 */
-
-/* колір білий #FFFFFF */
-
-/*колір акцент #2196F3 */
-
-/* колір тексту футер rgba(255, 255, 255, 0.4) */
-
-/* другорядний колір фона #F5F4FA */
-
-/* колір фона герой rgb(198, 198, 199) */
-/* 
-
-
-
-
-
-
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --background-color: #fff;
+  --white-color: #ffffff;
+  --white-second-color: #f5f4fa;
+  --white-bg-color: #e5e5e5;
+  --backgraund-bg-color: #2f303a;
+  --social-color: #afb1b8;
+}
 
 /* Герой */
+
 .section.hero {
   padding-top: 0;
   padding-bottom: 0;
@@ -159,7 +145,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--primary-text-color);
+  color: var(--title-text-color);
 }
 
 .form-field {
@@ -324,7 +310,6 @@ body {
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  /* background-color: var(--accent-color); */
 }
 
 .works {
