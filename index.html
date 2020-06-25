@@ -62,7 +62,7 @@
             эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="button" data-open-modal>Заказать услугу</button>
+          <button class="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -446,9 +446,9 @@
         </div>
       </section>
       <!-- модульне вікно-Заказать услугу -->
-      <div class="backdrop is-hidden" data-backdrop>
+      <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="btn" data-close-modal>
+          <button class="btn" data-modal-close>
             <svg class="icon-btn-close" width="11" height="11">
               <use href="./images/sprite1.svg#icon-krestik"></use>
             </svg>
@@ -514,7 +514,7 @@
               </span>
             </label>
 
-            <button type="“submit”" data-modal-close>Отправить</button>
+            <button class="button submit" type="submit">Отправить</button>
           </form>
         </div>
       </div>
@@ -610,42 +610,7 @@
         <p class="copyrigyt">2020 | Developed by GoIT Students</p>
       </div>
     </footer>
-    <!-- js -->
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector("[data-open-modal]"),
-        closeModalBtn: document.querySelector("[data-close-modal]"),
-        backdrop: document.querySelector("[data-backdrop]"),
-      };
-
-      refs.openModalBtn.addEventListener("click", toggleModal);
-      refs.closeModalBtn.addEventListener("click", toggleModal);
-
-      refs.backdrop.addEventListener("click", logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle("is-hidden");
-      }
-
-      function logBackdropClick() {
-        console.log("Это клик в бекдроп");
-      }
-
-      // from js
-
-      (() => {
-        document
-          .querySelector(".js-speaker-form")
-          .addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`)
-            );
-
-            e.currentTarget.reset();
-          });
-      })();
+    <script src="./js/modal.js"></script>
     </script>
   </body>
 </html>
